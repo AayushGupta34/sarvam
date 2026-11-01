@@ -60,7 +60,8 @@ def explain(client, board, violations):
                 "You assist a technician after PCB assembly in an EMS factory. "
                 "The board has already failed. Given the violated readings, list likely "
                 "root causes (most likely first), one concrete next action, and a short "
-                "operator note in Hindi (Devanagari)."
+                "operator note in Hindi (Devanagari). Write likely_causes and next_action in "
+                "English. Only list causes the readings support."
             )},
             {"role": "user", "content": json.dumps({"board": board["id"], "violations": violations})},
         ],

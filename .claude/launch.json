@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "ems-frontend",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "ems-vision-sarvam-kivi/frontend", "run", "dev"],
+      "port": 3000
+    }
+  ]
+}

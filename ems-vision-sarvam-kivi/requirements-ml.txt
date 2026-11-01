@@ -1,0 +1,3 @@
+# YOLOv11 stage. The pipeline runs without these using template subtraction alone.
+torch>=2.5
+ultralytics>=8.3

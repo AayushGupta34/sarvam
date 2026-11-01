@@ -1,0 +1,6 @@
+{
+  "board_w_mm": 80.0,
+  "board_h_mm": 60.0,
+  "px_per_mm": 25,
+  "bga_designator": "BGA1"
+}

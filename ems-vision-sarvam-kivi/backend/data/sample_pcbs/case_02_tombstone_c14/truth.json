@@ -1,0 +1,18 @@
+{
+  "id": "case_02_tombstone_c14",
+  "title": "Tombstoned capacitor C14",
+  "serial": "EMS-2411-0002",
+  "defects": [
+    {
+      "class": "tombstoning",
+      "designator": "C14",
+      "bbox": [
+        272,
+        938,
+        328,
+        962
+      ]
+    }
+  ],
+  "void_pct": 9.0
+}

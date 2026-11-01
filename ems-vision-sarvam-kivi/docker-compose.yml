@@ -1,0 +1,17 @@
+services:
+  backend:
+    build: .
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql+psycopg://ems:ems@db:5432/ems
+    ports: ["8000:8000"]
+    depends_on: [db]
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: ems
+      POSTGRES_PASSWORD: ems
+      POSTGRES_DB: ems
+    volumes: ["pgdata:/var/lib/postgresql/data"]
+volumes:
+  pgdata:

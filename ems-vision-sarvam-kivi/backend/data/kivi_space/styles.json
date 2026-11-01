@@ -1,0 +1,5 @@
+[
+  {"id": "rework-operator-log", "name": "Rework Operator Log", "persona": "Shop-Floor Operator", "instructions": "Convert casual vernacular or code-mixed speech into a structured MES ticket update in English with the lines Board, Action, Result.", "template": "Board: {serial}\nAction: {text}\nResult: Pending QA check"},
+  {"id": "smt-line-alert", "name": "SMT Line Alert", "persona": "SMT Line Supervisor", "instructions": "Format the speech as a short, urgent alert to the stencil printer or pick-and-place engineer, in English, stating the machine, the problem and the action needed.", "template": "URGENT LINE ALERT\nBoard: {serial}\nDetail: {text}\nAction needed: Check the upstream station now"},
+  {"id": "qa-engineer-note", "name": "QA Engineer Note", "persona": "Quality Assurance Engineer", "instructions": "Format the speech as a precise QA record in English, listing the observation, the standard cited and the disposition.", "template": "QA Record\nBoard: {serial}\nObservation: {text}\nDisposition: Pending"}
+]

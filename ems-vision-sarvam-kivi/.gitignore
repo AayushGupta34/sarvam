@@ -1,0 +1,15 @@
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+node_modules/
+.next/
+next-env.d.ts
+*.tsbuildinfo
+*.db
+backend/data/uploads/
+edge-sensing/datasets/raw/
+edge-sensing/datasets/synthetic_yolo/
+edge-sensing/runs/
+*.pt
+!edge-sensing/weights/pcb_yolo11n.pt

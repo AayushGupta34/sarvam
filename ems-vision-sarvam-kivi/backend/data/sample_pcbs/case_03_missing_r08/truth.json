@@ -1,0 +1,18 @@
+{
+  "id": "case_03_missing_r08",
+  "title": "Missing resistor R08",
+  "serial": "EMS-2411-0003",
+  "defects": [
+    {
+      "class": "missing_component",
+      "designator": "R08",
+      "bbox": [
+        722,
+        938,
+        778,
+        962
+      ]
+    }
+  ],
+  "void_pct": 6.5
+}

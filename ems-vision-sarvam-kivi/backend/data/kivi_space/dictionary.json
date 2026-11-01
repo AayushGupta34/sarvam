@@ -1,0 +1,22 @@
+[
+  {"id": "qfn48", "spoken_variants": ["qfn 48", "cue eff en forty eight", "q f n forty eight"], "canonical_term": "QFN-48", "description": "48-pin Quad Flat No-lead IC package", "add_to_keyterms": true},
+  {"id": "tomb", "spoken_variants": ["tomb stoning", "tom stoning", "tombstone ho gaya", "tomb stone"], "canonical_term": "Tombstoning (IPC-A-610 Defect)", "description": "Chip part lifted on one end during reflow", "add_to_keyterms": true},
+  {"id": "bridge", "spoken_variants": ["solder bridge", "soldering bridge", "sodar bridge", "solder short"], "canonical_term": "Solder Bridge", "description": "Unwanted solder joining adjacent pads", "add_to_keyterms": true},
+  {"id": "wick", "spoken_variants": ["desoldering wick", "de soldering wick", "copper wick", "solder wick"], "canonical_term": "Desoldering Wick", "description": "Copper braid that lifts solder by capillary action", "add_to_keyterms": true},
+  {"id": "bga", "spoken_variants": ["b g a", "bee gee ay", "ball grid"], "canonical_term": "BGA", "description": "Ball Grid Array package", "add_to_keyterms": true},
+  {"id": "qfn", "spoken_variants": ["q f n", "cue eff en"], "canonical_term": "QFN", "description": "Quad Flat No-lead package", "add_to_keyterms": true},
+  {"id": "u12", "spoken_variants": ["u twelve", "you twelve", "u one two"], "canonical_term": "U12", "description": "Main controller, QFN-48", "add_to_keyterms": true},
+  {"id": "r402", "spoken_variants": ["r four zero two", "are four oh two", "r four hundred two"], "canonical_term": "R402", "description": "UART series resistor", "add_to_keyterms": true},
+  {"id": "r08", "spoken_variants": ["r zero eight", "are oh eight", "r eight"], "canonical_term": "R08", "description": "SPI clock series resistor", "add_to_keyterms": true},
+  {"id": "c19", "spoken_variants": ["c nineteen", "see nineteen", "c one nine"], "canonical_term": "C19", "description": "0805 decoupling capacitor", "add_to_keyterms": true},
+  {"id": "c14", "spoken_variants": ["c fourteen", "see fourteen", "c one four"], "canonical_term": "C14", "description": "0603 decoupling capacitor", "add_to_keyterms": true},
+  {"id": "d3", "spoken_variants": ["d three", "dee three", "diode three"], "canonical_term": "D3", "description": "SOD-123 input protection diode", "add_to_keyterms": true},
+  {"id": "aoi", "spoken_variants": ["a o i", "ay oh eye", "optical machine"], "canonical_term": "AOI", "description": "Automated Optical Inspection", "add_to_keyterms": true},
+  {"id": "axi", "spoken_variants": ["a x i", "x ray machine", "ax ray"], "canonical_term": "AXI", "description": "Automated X-ray Inspection", "add_to_keyterms": true},
+  {"id": "reflow", "spoken_variants": ["re flow", "reflow oven", "riflow"], "canonical_term": "Reflow", "description": "Oven step that melts solder paste", "add_to_keyterms": true},
+  {"id": "stencil", "spoken_variants": ["stensil", "stencil plate", "istencil"], "canonical_term": "Stencil", "description": "Metal foil used for paste printing", "add_to_keyterms": true},
+  {"id": "squeegee", "spoken_variants": ["squeegy", "squeeze blade", "iskweegee"], "canonical_term": "Squeegee", "description": "Blade that pushes paste across the stencil", "add_to_keyterms": true},
+  {"id": "flux", "spoken_variants": ["flucks", "phlux", "falux"], "canonical_term": "Flux", "description": "Cleans metal so that solder wets", "add_to_keyterms": true},
+  {"id": "ipc610", "spoken_variants": ["i p c six ten", "ipc a six ten", "ipc 610"], "canonical_term": "IPC-A-610", "description": "Acceptability of Electronic Assemblies", "add_to_keyterms": true},
+  {"id": "void", "spoken_variants": ["voiding", "void percent", "hawa ka bubble"], "canonical_term": "Void", "description": "Gas pocket inside a solder joint", "add_to_keyterms": true}
+]

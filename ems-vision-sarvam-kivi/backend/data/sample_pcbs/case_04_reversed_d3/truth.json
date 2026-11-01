@@ -1,0 +1,18 @@
+{
+  "id": "case_04_reversed_d3",
+  "title": "Reversed diode D3",
+  "serial": "EMS-2411-0004",
+  "defects": [
+    {
+      "class": "polarity_error",
+      "designator": "D3",
+      "bbox": [
+        1177,
+        927,
+        1273,
+        973
+      ]
+    }
+  ],
+  "void_pct": 8.0
+}

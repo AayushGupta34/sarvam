@@ -1,0 +1,69 @@
+{
+  "synthetic_vision": {
+    "images": 6,
+    "mAP@50": 1.0,
+    "mAP@50-95": 0.9,
+    "precision@50": 1.0,
+    "recall@50": 1.0,
+    "latency_ms_mean": 359.7,
+    "bga_voids": [
+      {
+        "case": "case_01_solder_bridge_u12",
+        "true_pct": 7.5,
+        "measured_pct": 7.44,
+        "failed_over_25pct": false
+      },
+      {
+        "case": "case_02_tombstone_c14",
+        "true_pct": 9.0,
+        "measured_pct": 8.92,
+        "failed_over_25pct": false
+      },
+      {
+        "case": "case_03_missing_r08",
+        "true_pct": 6.5,
+        "measured_pct": 6.43,
+        "failed_over_25pct": false
+      },
+      {
+        "case": "case_04_reversed_d3",
+        "true_pct": 8.0,
+        "measured_pct": 7.92,
+        "failed_over_25pct": false
+      },
+      {
+        "case": "case_05_bga1_voiding",
+        "true_pct": 32.0,
+        "measured_pct": 31.82,
+        "failed_over_25pct": true
+      },
+      {
+        "case": "case_06_clean_pass",
+        "true_pct": 7.0,
+        "measured_pct": 6.92,
+        "failed_over_25pct": false
+      }
+    ]
+  },
+  "kivi_offline": {
+    "note": "scripted recogniser errors, dictionary replacer only; not a spoken-audio measurement",
+    "wer_without_dictionary": 0.9323,
+    "wer_with_dictionary": 0.0
+  },
+  "deeppcb_vision": {
+    "images": 1000,
+    "split": "holdout",
+    "note": "real data, class-agnostic localisation",
+    "mAP@50": 0.569,
+    "mAP@50-95": 0.2859,
+    "precision@50": 0.6465,
+    "recall@50": 0.8074,
+    "latency_ms_mean": 14.1
+  },
+  "kivi_live": {
+    "note": "bulbul audio through saaras:v4, small corpus",
+    "wer_no_keyterms": 0.3862,
+    "wer_keyterms": 0.3237,
+    "wer_keyterms_plus_dictionary": 0.2671
+  }
+}

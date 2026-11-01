@@ -1,0 +1,7 @@
+[
+  {"id": "bridge-fixed", "trigger": "log bridge fixed", "expansion": "Action Taken: Applied ROL0 no-clean flux and removed solder bridge using 1.5mm copper braid at 360°C. Inspected under 20x stereo microscope; meets IPC-A-610 Class 3 clearance."},
+  {"id": "tomb-fixed", "trigger": "log tombstone fixed", "expansion": "Action Taken: Removed lifted part, cleaned pads with copper braid, and resoldered a new part flat on both pads. Inspected under 20x stereo microscope; meets IPC-A-610 Class 3 end joint requirements."},
+  {"id": "part-added", "trigger": "log part added", "expansion": "Action Taken: Verified value against BOM, placed the missing part, and soldered both terminations. Inspected under 20x stereo microscope; meets IPC-A-610 Class 3."},
+  {"id": "polarity-fixed", "trigger": "log polarity fixed", "expansion": "Action Taken: Removed reversed part with hot air, cleaned pads, and refitted with polarity matching silkscreen. Inspected under 20x stereo microscope; meets IPC-A-610 Class 3."},
+  {"id": "hold-board", "trigger": "log board on hold", "expansion": "Status: Board placed on hold and tagged for QA review. No rework performed."}
+]

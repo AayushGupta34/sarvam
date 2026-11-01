@@ -1,0 +1,22 @@
+{
+  "id": "case_01_solder_bridge_u12",
+  "title": "Solder bridge on U12",
+  "serial": "EMS-2411-0001",
+  "defects": [
+    {
+      "class": "solder_bridge",
+      "designator": "U12",
+      "pins": [
+        5,
+        6
+      ],
+      "bbox": [
+        424,
+        423,
+        446,
+        452
+      ]
+    }
+  ],
+  "void_pct": 7.5
+}

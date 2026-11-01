@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0a0a0a;
+  --panel: rgb(255 255 255 / 0.04);
+  --line: rgb(255 255 255 / 0.1);
+  --text: #f1f1f4;
+  --muted: #9a9aa6;
+  --accent: #a855f7;
+  --accent-soft: rgb(168 85 247 / 0.35);
+  --good: #34d399;
+  --bad: #f87171;
+  --ease: 200ms ease-out;
+}
+
+html, body { background: var(--bg); color: var(--text); min-height: 100%; font-family: Inter, "Noto Sans", system-ui, sans-serif; }
+body { background: radial-gradient(900px 500px at 85% -10%, rgb(168 85 247 / 0.1), transparent), var(--bg); }
+.kivi { --bg: #0f100e; --accent: #9ce37d; --accent-soft: rgb(156 227 125 / 0.3); background: #0f100e; }
+
+.glass { background: var(--panel); border: 1px solid var(--line); border-radius: 18px; backdrop-filter: blur(14px); }
+.muted { color: var(--muted); }
+.mono { font-family: ui-monospace, "Cascadia Code", Consolas, monospace; }
+.serif { font-family: Georgia, "Times New Roman", serif; }
+.live-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 10px var(--accent); animation: breathe 1.6s ease-in-out infinite; }
+.off-dot { width: 8px; height: 8px; border-radius: 50%; background: #55555f; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 9px 18px; border-radius: 999px; font-size: 14px; font-weight: 600; cursor: pointer; transition: transform var(--ease), box-shadow var(--ease), border-color var(--ease); }
+.btn:hover:not(:disabled) { transform: scale(1.03); }
+.btn:active:not(:disabled) { transform: scale(0.98); }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.btn-primary { background: var(--accent); color: #0a0a0a; box-shadow: 0 0 18px var(--accent-soft); }
+.btn-primary:hover:not(:disabled) { box-shadow: 0 0 32px var(--accent); }
+.btn-outline { background: transparent; border: 1px solid var(--accent); color: var(--text); box-shadow: 0 0 10px var(--accent-soft); }
+.btn-outline:hover:not(:disabled) { box-shadow: 0 0 22px var(--accent-soft), inset 0 0 12px var(--accent-soft); }
+.btn-ghost { background: rgb(255 255 255 / 0.05); border: 1px solid var(--line); color: var(--text); }
+.btn-ghost:hover:not(:disabled) { box-shadow: 0 6px 18px rgb(0 0 0 / 0.5); border-color: rgb(255 255 255 / 0.25); }
+.icon-btn { width: 38px; height: 38px; padding: 0; flex: none; }
+
+.field { width: 100%; background: rgb(255 255 255 / 0.05); border: 1px solid var(--line); border-radius: 12px; padding: 9px 12px; font-size: 14px; color: var(--text); outline: none; transition: box-shadow var(--ease), border-color var(--ease); }
+.field:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+select.field option { background: #16161a; color: #f1f1f4; }
+
+.composer { display: flex; align-items: center; gap: 8px; padding: 7px; border-radius: 999px; background: #141417; border: 1px solid var(--line); transition: box-shadow var(--ease), border-color var(--ease); }
+.composer:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft), 0 0 24px var(--accent-soft); }
+.composer input { flex: 1; min-width: 0; background: none; outline: none; font-size: 14px; padding: 0 4px; }
+
+.mic { position: relative; width: 38px; height: 38px; flex: none; border-radius: 50%; display: grid; place-items: center; cursor: pointer; background: rgb(255 255 255 / 0.06); transition: transform var(--ease), box-shadow var(--ease); }
+.mic:hover { transform: scale(1.08); box-shadow: 0 0 14px var(--accent-soft); }
+.mic.on { background: radial-gradient(circle, var(--accent), #6d28d9); animation: orb 2.4s ease-in-out infinite; box-shadow: 0 0 26px var(--accent); }
+.mic.on::before, .mic.on::after { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 2px solid var(--accent); animation: ripple 1.5s ease-out infinite; pointer-events: none; }
+.mic.on::after { animation-delay: 0.6s; }
+
+.tilt { position: relative; overflow: hidden; cursor: pointer; text-align: left; border-radius: 16px; padding: 16px; background: rgb(255 255 255 / 0.04); border: 1px solid var(--line); transition: transform 150ms ease-out, box-shadow var(--ease), border-color var(--ease); transform-style: preserve-3d; }
+.tilt::after { content: ""; position: absolute; inset: -60%; background: linear-gradient(120deg, transparent 42%, rgb(255 255 255 / 0.14) 50%, transparent 58%); transform: translateX(-60%); transition: transform 450ms ease-out; pointer-events: none; }
+.tilt:hover { box-shadow: 0 18px 36px rgb(0 0 0 / 0.6); }
+.tilt:hover::after { transform: translateX(60%); }
+.tilt.selected { border-color: var(--accent); box-shadow: 0 0 22px var(--accent-soft); }
+
+.scene { position: relative; width: 62px; height: 30px; flex: none; border-radius: 999px; cursor: pointer; overflow: hidden; background: linear-gradient(#1b1740, #312a74); transition: background var(--ease), box-shadow var(--ease), transform var(--ease); }
+.scene:hover { transform: scale(1.05); }
+.scene.on { background: linear-gradient(#7c3aed, #c084fc); box-shadow: 0 0 16px var(--accent-soft); }
+.scene .star { position: absolute; width: 2px; height: 2px; border-radius: 50%; background: #fff; transition: opacity var(--ease); }
+.scene.on .star { opacity: 0; }
+.scene .cloud { position: absolute; bottom: 4px; left: -22px; width: 18px; height: 7px; border-radius: 8px; background: rgb(255 255 255 / 0.85); transition: left 250ms ease-out; }
+.scene.on .cloud { left: 8px; }
+.scene .thumb { position: absolute; top: 3px; left: 3px; width: 24px; height: 24px; border-radius: 50%; background: #d7d3ea; box-shadow: inset -5px -3px 0 #a9a3c9; transition: left 220ms ease-out, background var(--ease), box-shadow var(--ease); }
+.scene.on .thumb { left: 35px; background: #fde68a; box-shadow: 0 0 12px #fde68a; }
+
+.radar { position: relative; width: 190px; height: 190px; }
+.radar i { position: absolute; border-radius: 50%; border-style: dashed; animation: spin linear infinite; }
+
+.chip { position: relative; aspect-ratio: 1.66; min-height: 150px; padding: 16px; border-radius: 16px; background: linear-gradient(135deg, #1b1b22, #0e0e12); border: 1px solid var(--line); overflow: hidden; transition: transform var(--ease), box-shadow var(--ease); }
+.chip:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgb(0 0 0 / 0.6); }
+.arcs span { position: absolute; right: 16px; top: 16px; border: 2px solid transparent; border-top-color: var(--accent); border-right-color: var(--accent); border-radius: 50%; opacity: 0.2; animation: arc 1.5s infinite; }
+
+.range { padding: 2px 9px; border-radius: 999px; font-size: 11px; color: var(--muted); cursor: pointer; transition: transform var(--ease), box-shadow var(--ease); }
+.range:hover { transform: scale(1.08); box-shadow: 0 0 8px var(--accent-soft); }
+.range.on { background: var(--accent); color: #0a0a0a; }
+
+.progress { position: absolute; left: 14px; right: 14px; bottom: 3px; height: 2px; border-radius: 2px; overflow: hidden; background: rgb(0 0 0 / 0.3); }
+.progress::after { content: ""; display: block; height: 100%; width: 40%; background: #fff; animation: slide 1s ease-in-out infinite; }
+
+.fab { position: relative; width: 104px; height: 104px; }
+.fab-core { position: absolute; inset: 34px; border-radius: 50%; background: #18181d; border: 1px solid var(--line); display: grid; place-items: center; z-index: 2; transition: transform var(--ease); }
+.fab:hover .fab-core { transform: rotate(45deg) scale(1.08); }
+.fab-seg { position: absolute; width: 50px; height: 50px; display: grid; place-items: center; background: rgb(255 255 255 / 0.06); opacity: 0; transform: scale(0.6); cursor: pointer; transition: opacity var(--ease), transform var(--ease), background var(--ease), box-shadow var(--ease); }
+.fab:hover .fab-seg { opacity: 1; transform: scale(1); }
+.fab-seg:hover { background: var(--accent-soft); box-shadow: 0 0 14px var(--accent-soft); }
+
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes breathe { 50% { transform: scale(1.35); opacity: 0.7; } }
+@keyframes orb { 50% { transform: scale(1.1); filter: hue-rotate(35deg); } }
+@keyframes ripple { to { transform: scale(2.3); opacity: 0; } }
+@keyframes arc { 40% { opacity: 1; } }
+@keyframes slide { from { transform: translateX(-100%); } to { transform: translateX(260%); } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
